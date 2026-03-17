@@ -1,15 +1,14 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
-
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <x-welcome />
-            </div>
+    <section>
+        <div class="description">
+            <h1 style="font-weight:bold; font-size:35px;margin-top:5px">Where Music Begins</h1>
         </div>
-    </div>
+
+        <p style="font-size:18px;text-align:center;width:80%;">
+            Discover the rhythm <span>inside you</span> and bring your music to life. <br>
+            From guitars to keyboards, find every instrument you need in one place. <br>
+            Start your journey, play your sound, and make it unforgettable.
+        </p>
+     
+    </section>
 </x-app-layout>
