@@ -1,4 +1,7 @@
 <x-app-layout>
+    @push('styles')
+    <link href="{{asset('css/dash.css')}}" rel=stylesheet>
+@endpush
     <section>
         <div class="description">
             <h1 style="font-weight:bold; font-size:35px;margin-top:5px">Where Music Begins</h1>

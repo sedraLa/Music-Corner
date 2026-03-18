@@ -32,61 +32,15 @@ body {
 
 
 .hero-background {
-  background-image: url('/images/second2.jpg');
+  background-image: url('/images/john-matychuk-gUK3lA3K7Yo-unsplash.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 380px;
+  height: 497px;
   width: 100vw;
   z-index: -1;
   position: absolute;
 }
-
-.hero-background.destinations-page {
-  background-image: url('/images/second2.jpg');
-}
-
-.hero-background.hotels-page {
-  background-image: url('/images/h10.jpg');
-}
-
-.hero-background.transport-page,
-.hero-background.activity-page {
-  position: relative;
-  display: flex;
-  width: 100%;
-  height: 550px;
-}
-
-.hero-background.transport-page {
-  background-image: url('/images/kevin-xing-j8004R3nkxY-unsplash.jpg');
-}
-
-.hero-background.activity-page {
-  background-image: url('/images/kalen-emsley-UqyHjOgYxYY-unsplash.jpg');
-}
-
-.hero-background.transport-page::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #3d3d9282;
-  z-index: 1;
-}
-
-
-.hero-background.transport-page img {
-  width: 100%;
-  position: relative;
-  z-index: 0;
-}
-
-
-
-
 
 
 .search-form {
@@ -175,7 +129,7 @@ h6 {
   padding: 40px;
   width: 100%;
   max-width: 1300px;
-  margin: 180px auto;
+  margin: 246px auto;
 }
 
 .card {

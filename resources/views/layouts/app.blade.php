@@ -18,7 +18,7 @@
         @livewireStyles
          <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
-        <link href="{{asset('css/dash.css')}}" rel=stylesheet>
+        
         @stack('styles')
     </head>
 
