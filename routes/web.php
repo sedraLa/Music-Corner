@@ -22,5 +22,8 @@ Route::middleware([
 
     Route::post('/favorites/{id}', [FavoriteController::class, 'toggle'])
     ->name('favorites.toggle');
+
+    Route::get('/favorites',[FavoriteController::class, 'index'])
+    ->name('favorites.index');
 });
 

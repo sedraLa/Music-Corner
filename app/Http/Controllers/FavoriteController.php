@@ -13,4 +13,10 @@ class FavoriteController extends Controller
             'status' => count($result['attached']) ? 'added' : 'removed'
             ]);
     }
+
+    public function index() {
+        $user = auth()->user();
+        $favorites = $user->favorites()->latest()->get();
+        return view('favorites.index', compact('favorites'));
+    }
 }
