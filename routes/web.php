@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FavoriteController;
+use App\Http\Controllers\CartController;
 
 Route::get('/', function () {
     return view('auth.login');
@@ -25,5 +26,7 @@ Route::middleware([
 
     Route::get('/favorites',[FavoriteController::class, 'index'])
     ->name('favorites.index');
+
+    Route::post('/cart/toggle/{product}', [CartController::class, 'toggle'])->name('cart.toggle');
 });
 
