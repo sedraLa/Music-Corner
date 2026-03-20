@@ -41,12 +41,12 @@
             <div class="card">
                     <div class="card-img">
                         {{-- Add heart button to add to favourites--}}
-                        <button 
+                        <button
                         class="fav-btn fav-toggle"
                         data-id="{{ $product->id }}"
                         style="position:absolute; top:10px; right:10px; z-index:10; background:none; border:none; cursor:pointer;"
                     >
-                        <svg 
+                        <svg
                             xmlns="http://www.w3.org/2000/svg"
                             class="heart-icon h-8 w-8 {{ $isFav ? 'text-red-500' : 'text-gray-400' }}"
                             viewBox="0 0 20 20"
@@ -69,7 +69,7 @@
                     </h5>
                 <p class="overview">{{ Str::limit($product->description),80 }}</p>
                  <p class="overview">{{ $product->price }}$</p>
-                 
+
                 </a>
                 <div class="manage-btn flex items-center gap-3 mt-3 mb-3 px-4">
                     <a href="">
@@ -91,12 +91,12 @@
 
 <script>
     document.querySelectorAll('.fav-toggle').forEach(button => {
-    
+
         button.addEventListener('click', function () {
-    
+
             const productId = this.dataset.id;
             const icon = this.querySelector('.heart-icon');
-    
+
             fetch(`/favorites/${productId}`, {
                 method: 'POST',
                 headers: {
@@ -106,7 +106,7 @@
             })
             .then(res => res.json())
             .then(data => {
-    
+
                 if (data.status === 'added') {
                     icon.classList.remove('text-gray-400');
                     icon.classList.add('text-red-500');
@@ -114,10 +114,10 @@
                     icon.classList.remove('text-red-500');
                     icon.classList.add('text-gray-400');
                 }
-    
+
             })
             .catch(error => console.error(error));
         });
-    
+
     });
     </script>
